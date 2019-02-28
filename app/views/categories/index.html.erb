@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>ROOT Categories</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Image</th>
+        <th>Detail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @categories.each do |category| %>
+        <tr>
+          <td><%= category.id %></td>
+          <td><%= category.name %></td>
+          <td><%= link_to category.image, category.image, target: "_blank" %></td>
+          <td><%= link_to "Show", category %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
